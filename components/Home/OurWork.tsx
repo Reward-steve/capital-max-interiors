@@ -28,7 +28,7 @@ const ImageModal = ({
       >
         <button
           onClick={onClose}
-          className="absolute top-4 bg-gray-500 rounded-full p-2 hover:animate-spin hover:text-red-500 right-4 text-white hover:text-gray-300 z-10"
+          className="absolute top-4 bg-gray-500 rounded-full p-2 hover:animate-spin hover:text-red-500 right-4 text-white z-10"
           aria-label="Close"
         >
           <FaTimes size={24} className="" />
