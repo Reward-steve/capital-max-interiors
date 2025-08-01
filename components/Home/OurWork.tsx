@@ -13,7 +13,7 @@ const OurWorkGallery = () => {
         >
           <path
             d="M0,0 C150,60 350,0 500,60 L500,0 L0,0 Z"
-            fill="#f3f4f6"
+            className="fill-primary"
           ></path>
         </svg>
       </div>
