@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-primary: #102d4d; /* Deep Navy */
   --color-accent-gold: #d4af37; /* Luxury Gold */

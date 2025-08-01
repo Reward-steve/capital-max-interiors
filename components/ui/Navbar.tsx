@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "./Button";
-import Image from "next/image";
-import logo from "@/public/capital-max.jpg";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Logo } from "./Logo";
 
 export function Navbar() {
@@ -12,7 +11,7 @@ export function Navbar() {
   return (
     <header className="bg-primary text-background-light shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo / Brand */}
+        {/* Logo */}
         <Logo className="flex-shrink-0" />
 
         {/* Desktop Nav */}
@@ -43,24 +42,15 @@ export function Navbar() {
           className="md:hidden text-background-light focus:outline-none"
           aria-label="Toggle menu"
         >
-          <svg
-            className="w-7 h-7 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          {mobileMenuOpen ? (
+            <FaTimes className="w-7 h-7 transition-transform" />
+          ) : (
+            <FaBars className="w-7 h-7 transition-transform" />
+          )}
         </button>
       </div>
 
-      {/* Mobile Menu with Smooth Animation */}
+      {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
           mobileMenuOpen ? "max-h-[300px] px-6 pb-4" : "max-h-0 px-6"
