@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bodoni_Moda, Lato } from "next/font/google"; // Import a sans-serif font
 import "./globals.css";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Load Bodoni Moda for headlines
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
+  weight: ["400", "700"], // Load multiple weights for versatility
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Load a sans-serif font for body text
+const lato = Lato({
   subsets: ["latin"],
+  weight: ["400", "700"], // Load multiple weights
 });
 
 export const metadata: Metadata = {
@@ -27,10 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="min-h-screen bg-white text-gray-800 font-sans">
+      <body className={`${lato.className} antialiased`}>
+        {/* Set sans-serif as the body default */}
+        <div className="min-h-screen bg-white text-gray-800">
           <Navbar />
           {children}
           <Footer />

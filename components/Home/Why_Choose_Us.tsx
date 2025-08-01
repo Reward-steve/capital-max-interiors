@@ -2,7 +2,7 @@ import { FaGem, FaCouch, FaMoneyCheckAlt } from "react-icons/fa"; // or
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-20 px-6 max-w-6xl mx-auto text-center">
+    <section id="about" className="py-20 px-6 max-w-6xl mx-auto text-center">
       <h3 className="text-3xl font-semibold mb-6">Why Choose Us?</h3>
       <div className="grid md:grid-cols-3 gap-8 text-left">
         <div className="flex items-start gap-4">
