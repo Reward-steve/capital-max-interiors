@@ -75,7 +75,7 @@ export const OurWorkGallery = () => {
       </div>
 
       {/* Gallery Section */}
-      <section id="our-work" className="py-20 px-4 bg-white">
+      <section id="services" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800">Our Work</h2>

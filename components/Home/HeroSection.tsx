@@ -22,7 +22,9 @@ const HeroSection = () => {
           masters of curtain couture.
         </p>
         <div className="mt-8">
-          <Button variant="ghost">Explore Collection</Button>
+          <Button variant="ghost">
+            <a href="#services">Explore Collection</a>
+          </Button>
         </div>
       </div>
     </section>
