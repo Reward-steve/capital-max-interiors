@@ -24,7 +24,8 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-sm lg:text-base">
           {routes.map((route) => (
             <a
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              key={route.href}
+              onClick={() => setMobileMenuOpen(false)}
               href={route.href}
               className="hover:underline transition"
             >
@@ -64,19 +65,21 @@ export function Navbar() {
         }`}
       >
         <nav className="flex flex-col gap-4 text-sm">
-          <a href="#services" className="hover:underline transition">
-            Services
-          </a>
-          <a href="#about" className="hover:underline transition">
-            About
-          </a>
-          <a href="#contact" className="hover:underline transition">
-            Contact
-          </a>
+          {routes.map((route) => (
+            <a
+              key={route.href}
+              onClick={() => setMobileMenuOpen(false)}
+              href={route.href}
+              className="hover:underline transition"
+            >
+              {route.text}
+            </a>
+          ))}
           <Button variant="secondary" className="bg-accent-gold">
             <a
-              // href="https://wa.me/234XXXXXXXXXX"
+              href="https://api.whatsapp.com/send?phone=+2349121865839"
               target="_blank"
+              title=" Chat on WhatsApp"
               rel="noopener noreferrer"
             >
               Book Now
