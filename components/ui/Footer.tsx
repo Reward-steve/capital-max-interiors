@@ -6,6 +6,12 @@ import {
 } from "react-icons/fa";
 
 export function Footer() {
+  const routes = [
+    { href: "#hero", text: "Home" },
+    { href: "#about", text: "About" },
+    { href: "#services", text: "Services" },
+    { href: "#contact", text: "Contact" },
+  ];
   return (
     <footer className="bg-primary text-background-light px-6 py-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -22,26 +28,17 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#hero" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="hover:underline">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#gallery" className="hover:underline">
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:underline">
-                Contact
-              </a>
-            </li>
+            {routes.map((route) => (
+              <li>
+                <a
+                  key={route.href}
+                  href={route.href}
+                  className="hover:underline"
+                >
+                  {route.text}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
