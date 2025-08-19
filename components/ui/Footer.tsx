@@ -29,7 +29,7 @@ export function Footer() {
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             {routes.map((route) => (
-              <li>
+              <li key={route.text}>
                 <a
                   key={route.href}
                   href={route.href}
