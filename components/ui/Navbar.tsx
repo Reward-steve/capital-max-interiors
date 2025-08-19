@@ -37,7 +37,6 @@ export function Navbar() {
               target="_blank"
               title=" Chat on WhatsApp"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 p-4 rounded-full fixed bottom-2 z-20 right-2 bg-green-500 text-white hover:bg-green-600 transition duration-200"
             >
               Book Now
             </a>
